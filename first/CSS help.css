@@ -1,0 +1,39 @@
+h1{
+    color: rgb(238, 84, 32);
+}
+p{
+    background-color: white;
+    color: black;
+    font-family: "Nirmala UI Semilight";
+}
+h3,h4{
+    color: green;
+}
+body{
+    font-family: "微软雅黑 Light";
+}
+h1 strong{
+    color: black;
+    font-style: italic;
+    font-size: larger;
+}
+strong{
+    color: #ff0f31;
+}
+#duanluo2{
+    color: darkorchid;
+}
+#d34567{
+    color: goldenrod;
+}
+.center{
+    text-align: center;
+}
+[title~=welcome]{
+    border: 2px solid  blue ;
+}
+a{
+    font-size: larger;
+    font-family: 微软雅黑;
+    color: red;
+}
