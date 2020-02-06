@@ -568,13 +568,6 @@ function getQueryString(name) {
 	return null;
 }
 
-var get_q=getQueryString("q");
-if(get_q!="" && get_q!=null){
-    document.getElementById("url").placeholder=get_q;
-    document.getElementById("showtittle").innerHTML = get_q;
-}else{
-    document.getElementById("showtittle").innerHTML = "艺术长廊";
-}
 
 function showHint(str)
 {
