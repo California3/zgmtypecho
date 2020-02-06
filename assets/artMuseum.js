@@ -781,31 +781,3 @@ function belongmyTop(){
 }
 
 
-
-
-$(document).ready(function() {
-    changeRealUrlOfPic();
-    loadJavascriptOfArtMuseum();
-    setTimeout('LoadAllchangeRealUrlOfPic();',19499);
-});
-
-
-$(window).on('scroll', function(){
- changeRealUrlOfPic();
-})
-
-function loadJavascriptOfArtMuseum(){
-        $.getScript("https://www.6zgm.com/jq/highmaps.js", function(){
-    $.getScript("https://www.6zgm.com/jq/china.js", function(){
-        
-});
-});
-$.getScript("https://www.6zgm.com/jQ/autocomplete/jquery-ui-1.11.4.custom/jquery-ui.min.js", function(){
-        
-});
-    $.getScript("https://www.6zgm.com/jq/tx201704579/tx201704579/flavr/js/flavr.min.js", function(){
-        
-});
-
-}
-
