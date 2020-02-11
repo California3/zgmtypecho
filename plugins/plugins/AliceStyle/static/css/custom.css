@@ -1,0 +1,307 @@
+/* 
+ * 前台页面美化
+ * 
+ * 作者：兔子	QQ：1211515059	交流群：878555202
+ * 版本：Ver-1.0	更新时间：2019-11-3
+ * 美化不易，请保留版权信息和作者联系方式，方便后期版本升级
+ * 
+ * 需要在 “后台” → “设置外观” → “开发者设置” → “自定义输出head 头部的HTML代码” 添加以下代码
+ * <!-- 自定义css样式 -->
+ * <link rel="stylesheet" type="text/css" href="//域名/usr/extend/custom.css">
+ *
+ */
+
+
+ /*导航栏白色风格*/
+.bg-dark {
+    background-color: orange!important;
+}
+.bg-dark .dk, .bg-dark.dk {
+    background-color: #faf6f5!important;
+}
+.bg-dark .text-lt {
+    color: #646565!important;
+}
+.bg-dark .nav .open>a {
+    background-color: #f0f2f3!important;
+}
+.bg-dark .nav>li.active>a, .bg-dark .nav>li:focus>a, .bg-dark .nav>li:hover>a {
+    color: #fff;
+    background-color: #c07cffab!important;
+}
+.bg-dark .nav>li>a:focus, .bg-dark .nav>li>a:hover{
+    background-color: #c07cffab!important;
+}
+
+
+/*
+ * 首页文章列表获取焦点放大
+ * 功能：将鼠标放到首页列表后使其放大。将以下代码添加至后台主题设置 自定义CSS
+ */
+.panel{
+    cursor: pointer;
+    transition: all 0.6s;  
+}
+.blog-post .panel:not(article):hover{
+	transform: translateY(-10px);
+}
+.panel-small{
+    cursor: pointer;  
+    transition: all 0.6s;
+}
+.panel-small:hover{
+    transform: scale(1.05);
+}
+
+
+/*
+ * 首页头像自动旋转
+ * 将鼠标放至头像后使其转动并放大。将以下代码添加至后台主题设置 自定义CSS
+ */
+.thumb-lg{
+    width:96px;
+}
+.avatar{
+    -webkit-transition: 0.4s;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out; 
+}
+.avatar:hover{
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+}
+#aside-user span.avatar{
+    animation-timing-function:cubic-bezier(0,0,.07,1)!important;
+    border:0 solid
+}
+#aside-user span.avatar:hover{
+    transform:rotate(360deg) scale(1.2);
+    border-width:5px;
+    animation:avatar .5s
+}
+
+
+/*
+ * 首页文章版式阴影化
+ * 本项修改的是首页文章版式，包括图片使其四周加上一层绚丽的阴影。将以下代码添加至后台主题设置 自定义CSS
+ */
+.panel{
+    -moz-box-shadow: 0 8px 10px rgba(255, 112, 173, 0.35);
+}
+.panel:hover{
+    box-shadow: 0 8px 10px rgba(255, 112, 173, 0.35);
+    -moz-box-shadow: 0 8px 10px rgba(255, 112, 173, 0.35);
+}
+.panel-small{
+    box-shadow: 0 8px 10px rgba(255, 112, 173, 0.35);
+    -moz-box-shadow: 0 8px 10px rgba(255, 112, 173, 0.35);
+}
+.panel-small:hover{
+    box-shadow: 0 8px 10px rgba(255, 112, 173, 0.35);
+    -moz-box-shadow: 0 8px 10px rgba(255, 112, 173, 0.35);
+}
+/* #如果也想使盒子四周也有阴影，加上以下代码 */
+.app.container {
+    box-shadow: 0 0 30px rgba(255, 112, 173, 0.35);
+}
+.index-post-img , .entry-thumbnail{
+	overflow: hidden;
+}
+
+
+/*
+ * 首页文章图片获取焦点放大
+ * 本项修改的是首页文章图片，将鼠标放到首页头图后使其放大。将以下代码添加至后台主题设置 自定义CSS
+ */
+.item-thumb{
+    cursor: pointer;  
+    transition: all 0.6s;  
+}
+.item-thumb:hover{
+      transform: scale(1.05);  
+}
+.item-thumb-small{
+    cursor: pointer;  
+    transition: all 0.6s;
+}
+.item-thumb-small:hover{
+    transform: scale(1.05);
+}
+
+
+/*
+ * 顶部彩色跑马灯特效
+ * 本项修改的是顶部特效，顶部显示彩色跑马灯效果。将以下代码添加至后台主题设置 自定义CSS
+ * 需要在 “后台” → “设置外观” → “开发者设置” → “自定义输出head 头部的HTML代码” 添加代码<!-- 顶部跑马灯特效 --><div id="top-grrk"></div>
+ */
+#top-grrk{
+	background:url(../img/HorseRaceLamp.gif);
+	height:2px;
+	position:fixed;
+	width:100%;
+	Z-index:10000;
+}
+
+
+/*登录按钮*/
+.btn-block {
+    border-color: #fff!important;
+    background: #448bff linear-gradient(45deg,#448bff,#44e9ff)!important;
+    transition: all .2s ease;
+    border-radius: 30px!important;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+.btn-block:hover {
+    color: #f4f4f4!important;
+    opacity: .8;
+    transition: all .2s ease;
+}
+a.ModifyPasswd {float: right;}
+.btn-block.active, .btn-block:active, .btn-block:focus, .btn-block:hover, .open .dropdown-toggle.btn-block{background: #448bff linear-gradient(45deg,#80aef9,#2cddf5);transition: all .2s ease;}
+
+
+/*
+ * 文章内插入标签卡
+ * 本项修改的是tabs居中效果。将以下代码添加至后台主题设置 自定义CSS
+ */
+.tab-container{
+	/*text-align: center;*/
+}
+.tab-container img{
+	width: initial;
+}
+.tab-pane a.light-link img {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35);
+}
+
+
+/*
+ * 文章内打赏处插入menhera酱求打赏图片
+ * 本项修改的是文章内打赏处图片。将以下代码添加至后台主题设置 自定义CSS
+ */
+.support-author{
+	background-repeat: round;
+	background-image: url(../img/MenheraSauce.png);
+}
+.article__reward-info{
+	color: #00a0ed!important;
+    font-weight: bold;
+}
+/*文章内打赏图标跳动*/
+.btn-pay {
+    animation: star 0.5s ease-in-out infinite alternate;
+}
+@keyframes star {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+/*
+ * 右侧列表导航栏图标颜色
+ * 本项修改的是右侧列表导航栏图标彩色效果。将以下代码添加至后台主题设置 自定义CSS
+ */
+.glyphicon-fire {
+    color: rgba(191,62,255,0.6)!important;
+}
+.nav-tabs-alt .glyphicon-comment {
+    color: rgb(174, 220, 174);
+}
+.glyphicon-transfer {
+    color: rgb(255, 179, 128)!important;
+}
+.nav-tabs-alt .nav-tabs>li.active>a{
+	border-bottom-color: #23b7e5!important;
+}
+.list-group-item .pull-right {
+    /*background-color: rgba(191,62,255,0.6)!important;*/
+}
+
+
+/*
+ * canvas动态背景
+ * 本项修复启用canvas动态背景后，左边菜单栏背景无法与主题背景颜色样式兼容问题。将以下代码添加至后台主题设置 自定义CSS
+ */
+@media (min-width: 768px){
+	.app-aside-fixed .aside-wrap{
+		background-color: inherit!important;
+		opacity: 0.8;
+	}
+}
+
+
+/*
+ * 页面背景透明
+ * 本项修改的是主页和文章页面透明效果。将以下代码添加至后台主题设置 自定义CSS
+ */
+ #post-panel{background:rgba(241,243,244,.3)}
+.list-group-item{background-color:rgba(255,255,255,.6)}
+.bg-white{background-color:rgba(255,255,255,1)}
+.bg-light .lter,.bg-light.lter,.bg-info .dker,.bg-info.dker,.bg-info,.bg-black,.bg-dark,.bg-primary,.bg-info .dk,.bg-info.dk,.bg-success,.bg-danger,.bg-white-only,.alert-warning{opacity:.8}
+@media (max-width: 767px){.navbar-nav .open .dropdown-menu{background-color:rgba(255,255,255,.8)}
+.settings>.btn, .topButton>.btn, .tocify-mobile-panel>.btn{background-color:rgba(255,255,255,0.8)!important}
+aside#aside {opacity: 0.8;}
+.bg-light .lter, .bg-light.lter, .bg-info .dker, .bg-info.dker, .bg-info, .bg-black, .bg-dark, .bg-primary, .bg-info .dk, .bg-info.dk, .bg-success, .bg-danger, .bg-white-only, .alert-warning{opacity:0.98}	
+}
+
+
+
+/*
+ * 主题盒子优化
+ * 本项修改的是主题盒子模型效果。将以下代码添加至后台主题设置 自定义CSS
+ */
+/*
+.link-main{padding:50px 0 50px 20px;text-align:center}
+.link-main h3{margin-top:0}
+.link-main .item{display:inline-block;letter-spacing:0;margin-right:20px;margin-bottom:20px;width:289px;height:240px;font-size:14px;overflow:hidden;border-radius:5px;background:rgba(255,255,255,.35);border:1px solid #e1e8ed;transition:background .2s}
+.link-main .link-bg{position:relative;height:90px;padding:0 1em;background-color:#777}
+.link-main .link-bg .bg:before{display:block;content:"";position:absolute;left:0;height:100%;width:100%;background:rgba(0,0,0,.5)}
+.link-main .link-bg .link-avatar{position:absolute;bottom:-50px;border:4px solid #fff;border-radius:100%;background-color:#fff;box-shadow:0 0 5px rgba(0,0,0,.5)}
+.link-main .link-bg .link-avatar img{border-radius:100%}
+.link-main .avatar{display:block;object-fit:cover}
+.link-main .bg,.link-main .link-bg{background-repeat:no-repeat;background-position:center;background-size:cover;display:block}
+.link-main .bg{position:absolute;top:0;bottom:0;left:0;right:0;filter:blur(1.5px);background-color:#fff}
+.link-main .meta{padding:.9em 1em;text-align:right}
+.link-main .info{color:#525766;padding:0 1em 1em}
+.link-main .info .name{font-weight:600;font-size:16px}
+@media screen and(max-width:330px){.link-main{padding:50px 0 50px 0}.link-main .item{margin-right:0}}
+.link-main .item:hover{background:rgba(255,255,255,1)}
+.link-main .item:hover .bg{filter:blur(.1px)}
+#comments pre code{display:inline}
+.wrapper-md>#comments{border:solid 1px #fff;padding:10px 30px 20px 30px}
+.hideContent{background-color:transparent;padding:10px 0}
+.agent{display:inline-block;margin-left:5px;padding:0 3px;border-radius:2px;color:#58666e;font-size:12px;opacity:.8}
+img[mw400]{max-width:400px!important;width:100%}
+.mw400{max-width:400px}
+@media screen and (min-width:1200px){.sticky{position:absolute;top:10px;left:15px}
+.panel .item-thumb{height:300px}
+#post-panel .blog-post{position:relative}
+#post-panel .panel{overflow:hidden}
+#post-panel .panel .post-meta{position:relative;margin-top:-300px;height:300px;padding-top:133px!important;padding-bottom:0!important;background-color:rgba(0,0,0,.3);color:#fff!important;transition:all .3s}
+#post-panel .panel .post-meta,#post-panel .panel-small .post-meta{border-radius:5px}
+#post-panel .panel .post-meta *,#post-panel .panel-small .post-meta *{color:#fff!important}
+#post-panel .panel .post-meta>h2,#post-panel .panel-small .post-meta>h2{text-align:center;text-shadow:0 0 3px #fff}
+#post-panel .panel .post-meta>div,#post-panel .panel .post-meta>p,#post-panel .panel-small .post-meta>div,#post-panel .panel-small .post-meta>p{transition:all .3s;transform:translateY(-10px);opacity:0}
+#post-panel .panel .post-meta>.text-muted,#post-panel .panel-small .post-meta>.text-muted{position:absolute;bottom:20px}
+#post-panel .panel .post-meta>.line{position:absolute;bottom:40px;width:740px}
+#post-panel .panel-small .post-meta>.line{position:absolute;bottom:40px;width:350px}
+#post-panel .panel .post-meta>.summary{position:absolute;bottom:60px;width:740px}
+#post-panel .panel-small .post-meta>.summary{position:absolute;bottom:60px;width:350px}
+#post-panel .panel-small{display:inline-block;height:300px;width:calc(50% - 10px);margin-right:20px}
+#post-panel .panel-small:nth-child(2n){margin-right:0}
+#post-panel .panel-small .index-img-small,#post-panel .panel-small .index-img-small .item-thumb-small{height:100%;width:100%}
+#post-panel .panel-small .post-meta{position:absolute;height:300px;width:calc(50% - 10px);padding:133px 20px 0 20px!important;background-color:rgba(0,0,0,.3);color:#fff!important;transition:all .3s}
+#post-panel .panel-small:hover .post-meta,#post-panel .panel:hover .post-meta{background-color:rgba(0,0,0,.6)}
+#post-panel .panel-small:hover .post-meta>div,#post-panel .panel-small:hover .post-meta>p,#post-panel .panel:hover .post-meta>div,#post-panel .panel:hover .post-meta>p{opacity:1;transform:translateY(0)}
+#post-panel .panel-small:hover .post-meta,#post-panel .panel:hover .post-meta{padding-top:80px!important}
+#post-panel .ahover{display:block;position:absolute;top:0;left:0;right:0;bottom:0}
+.blog-post>.panel-small:hover .index-post-img-small,.blog-post>.panel:hover .index-post-img{filter:blur(3px)}
+}
+*/
